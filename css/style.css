@@ -2,7 +2,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  color: #616971;
+  color: #464a4d;
 }
 html{
   scroll-behavior:smooth;
@@ -14,14 +14,26 @@ html{
 }
 
 .lightMode {
-  background-color: #dde8f8;
+  background-color: #f7f6e8;
   transition: ease .3s;
+
 }
 /*============= TOP BAR HEADER =============*/
 
 
  
 /*============= NAVIGATION =============*/
+
+
+.fa-toggle-on:hover{
+  color: white
+  !important;
+}
+.fa-toggle-off:hover{
+  color: black
+  !important;
+}
+
 
 #help_btn2{
  border-radius: 8%;
@@ -33,10 +45,23 @@ cursor:hand;
 background-color: transparent
 
 }
+#help_btn3{
+  border-radius: 8%;
+  border :none;
+ font-weight: 500;
+ font-size: x-large;
+ color:#e48811;
+ cursor:hand;
+ background-color: transparent;
+}
 
 #help_btn2:hover{
-color: red;
+color:blue;
 }
+
+#help_btn3:hover{
+  color: red;
+  }
 
 #darkModeSwitch{
   border-radius: 8%;
@@ -46,7 +71,24 @@ color: red;
  border :none;
 }
 
+#h23{
+  font-size: xx-large;
+  font-weight: 500;
+  color: black;
+  padding-top: 10px;
 
+}
+#h23::after
+{
+  text-align: center;
+  content: '';
+  background: rgb(230, 218, 64);
+  display: block;
+  height: 2px;
+  width: 190px;
+  margin: 10px auto;
+
+}
 
 .nav-item:hover{
 background-color: rgb(236, 220, 80)!important;
@@ -69,31 +111,29 @@ background-color: rgb(236, 220, 80)!important;
 .bg-modal{
   width: 100%;
   height: 100%;
-  background-color:rgba(0,0,0,0.7);
-  opacity: 0.7;
+  background-color:black;
 
   position: absolute;
   top: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
   z-index: 1001;
   transform: scale(1);
-  transition: .6s ease opacity,.6s ease transform;
+  transition: .6s ,.6s ease transform;
 }
 
 .modal-content{
-  width: 500px;
-  height: 300px;
+  width: 1200px;
+  height: 600px;
 background-color: yellow;
 border-radius: 4px;
 justify-content: center!important;
 align-items: center!important;
-top: 10%;
+
 align-content: center!important;
-display:inline-block;
-padding-top: 10px;
+display:block;
 text-align: center;
 
 }
@@ -110,7 +150,8 @@ text-align: center;
 /*============= CAROUSEL =============*/
 
 .carousel-inner {
-max-height:38rem!important;
+  width:auto;
+max-height:36rem!important;
 }
 
 /*---Change Carousel Transition Speed --*/
@@ -119,6 +160,10 @@ max-height:38rem!important;
 .carousel-item-prev,
 .carousel-item.active{
   transition: 1.2s ease;
+}
+.slide{
+  width:auto;
+  max-height:36rem!important;
 }
 
 /*-- Carousel Content --*/
@@ -211,7 +256,7 @@ h1{
 h1:after{
   text-align: center;
   content: '';
-  background: black;
+  background: rgb(230, 218, 64);
   display: block;
   height: 2px;
   width: 190px;
@@ -230,19 +275,17 @@ h1:after{
 .profile .img-box{
   display: block;
   position: relative;
+
+;
 }
 
-.profile h2{
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 15px;
-  color: black;
+
+.imm{
+  max-width: 100%;
+  max-height: 100%;
 }
-.profile h3{
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 15px;
-}
+
+
 a.anchor {
   display: block;
   position: relative;
@@ -276,6 +319,15 @@ footer p, footer a{
 }
 
 
+#breadslice{
+   color: rgb(236, 220, 80);
+}
+#cake{
+  color: rgb(158, 75, 144);
+}
+#pastry{
+  color: rgb(228, 149, 46);
+}
 
 ul.social{
   list-style: none;
@@ -288,10 +340,41 @@ ul.social li{
   margin: 0 auto;
 }
 
-.footer_img h3{
+.footer_img h2{
   font-family: "Kaushan Script";
+  color: white;
 }
 
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper.dataTables_paginate.paginate_button.disabled,.dataTables_wrapper .dataTables_paginate .paginate_button{
+  color: rgb(165, 165, 165) !important;
+}
+.dataTables_wrapper.dataTables_paginate.paginate_button.enabled{
+  color: rgb(165, 165, 165) !important;
+}
+
+
+.dataTables_wrapper .dataTables_filter input {
+  background-color: rgb(176, 189, 204);
+}
+.dataTables_wrapper .dataTables_length select {
+  background-color:rgb(176, 189, 204);
+}
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button.current{
+    background-color:  rgb(165, 165, 165);
+  color: #045a9c!important;}
+
+  
+table.dataTable tbody tr {
+    background-color: transparent !important;
+
+}
+
+
+
+thead{
+  color: rgb(228, 149, 46);
+}
 #fb{
   font-size: x-large ;
 }
@@ -310,7 +393,15 @@ ul.social li{
   border-color: red;
 }
 
-
+#breadslice{
+  font-size: xx-large;
+}
+#cake{
+  font-size: xx-large;
+}
+ #pastry{
+  font-size: xx-large;
+}
 /*============= SOCKET =============*/
 
 .youtube {
@@ -324,9 +415,24 @@ margin: auto;
 /* Devices under 1199px (xl) */
 @media (max-width: 1199.98px) {
 
+
 }
 
 /* Devices under 768px (md) */
+
+
+@media (max-width: 991.98px) {
+
+
+  .modal-content{
+    width: 800px;
+    height: 500px;
+
+  }
+  
+  
+
+}
 @media (max-width: 767.98px) {
 
   #godown{
@@ -341,25 +447,68 @@ margin: auto;
   }
 
   .modal-content{
-    width: 400px;
-    height: 240px;
+    width: 600px;
+    height: 350px;
 
   }
+  #breadslice{
+    font-size: x-large;
+  }
+  #cake{
+    font-size: x-large;
+  }
+   #pastry{
+    font-size: x-large;
+  }
+  
+  
+  
 
 }
 @media (max-width: 575.98px) {
 
   
+ 
+
   .modal-content{
-    width: 380px;
-    height: 200px;
+    width: 420px;
+    height: 230px;
 
   }
-  #header_mod{
-    top:10%;
-    font-size: x-small;
+  #header1_mod{
+    font-size: small;
   }
 
+  #header2_mod{
+    
+    font-size: small;
+  }
+  #p1_mod{
+   
+    font-size: small;
+  }
+
+
+}
+
+h2{
+  font-size: xx-large;
+  font-weight: 550;
+
+  padding-top: 10px;
+
+}
+h3{
+  font-size: x-large;
+  font-weight: 500;
+
+  padding-top: 10px;
+
+}
+p{
+  font-size: x-large;
+  font-weight: 500;
+  padding-top: 10px;
 }
 
 
